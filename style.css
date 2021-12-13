@@ -2,8 +2,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    width: 100vw;
+
 }
 
 .etch-body {
@@ -11,18 +10,71 @@ body {
     border-width: 3px;
     border-style: solid;
     border-color: blue;
-    border-radius: 40px;
-    width: 60vw;
-    height: 80vh;
+    border-radius: 40px;    
+    width: 700px;
+    height: 700px;
+    min-width: 700px;
+    min-height: 700px;
+    padding-top: 50px;
     display: flex;
-    justify-content: center;
-    align-items: top;
-    padding-top: 100px;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 30px;
 }
 
 .etch-screen {
     width: 80%;
-    height: 75%;
+    height: 80%;
     background-color: cornsilk;
-    border-radius: 10px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.drawing-area {
+    width: 99%;
+    height: 99%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.options-area {
+    display: flex;
+    gap: 70px;
+    justify-content: left;
+    align-items: center;
+    width: 80%;
+    height: 10%;
+}
+
+.color-chooser,
+.size-chooser {
+    height: 50px;
+    width: 75px;
+    background-color: crimson;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+
+}
+
+.testBox {
+    background-color: white;
+    border-color: rgb(199, 197, 197);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 1px;
+    box-sizing: border-box;
+    margin: 0px;
+    padding:0px;
+    vertical-align: top;
+    font-size: 0px;
+}
+
+.testBox:hover {
+    background-color: rebeccapurple;
 }
