@@ -1,0 +1,1 @@
+# This is an etch-a-sketch made for the Project Odin Web Development course.
