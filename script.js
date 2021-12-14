@@ -12,10 +12,8 @@ GRAY = "lightgray";
 // Functions //
 //////////////
 // Puts an x by x grid of divs into the drawing-area div
-function drawGrid() {
+function drawGrid(gridSize) {
 
-    gridSize = Number(window.prompt("Please enter grid size."));
-    drawingArea = document.querySelector(".drawing-area");
 
     for (let i = 0; i < (gridSize * gridSize); i++) {
         newBox = document.createElement('div');
@@ -25,17 +23,29 @@ function drawGrid() {
         boxList.push(newBox);
         drawingArea.appendChild(newBox);
     }
+    // Add the onHover event for each box created
+    addHoverEvents(boxList);
 }
 
-// Does everything to create the grid - includes drawing the grid, adding listeners, etc.
+// Does everything to create the grid - includes erasing old grid, drawing grid, adding listeners, etc.
 function createGrid(gridSize) {
-    
+    deleteGrid();
+    drawGrid(gridSize);
 }
 
+// Delete the old box elements from our boxList and from the DOM so we can put the new ones
+function deleteGrid() {
+    console.log(boxList)
+    boxList = [];
+    console.log(boxList)
+    drawingArea.innerHTML = '';
+}
 
 //////////////////////////////////////
 // SELECT ELEMENTS & ADD LISTENERS //
 ////////////////////////////////////
+//Drawing area
+drawingArea = document.querySelector(".drawing-area");
 // Clear button
 clearButton = document.querySelector(".clear-button button");
 clearButton.addEventListener("mousedown", clearGrid);
@@ -52,8 +62,23 @@ blackButton = document.querySelector(".black-button");
 blackButton.addEventListener("mousedown", () => changeColor(BLACK));
 grayButton = document.querySelector(".gray-button");
 grayButton.addEventListener("mousedown", () => changeColor(GRAY));
-// The range input for screen gridSize
-
+// gridSize selection buttons
+button1 = document.querySelector('.button-1');
+button1.addEventListener("mousedown", () => createGrid(1));
+button2 = document.querySelector('.button-2');
+button2.addEventListener("mousedown", () => createGrid(2));
+button4 = document.querySelector('.button-4');
+button4.addEventListener("mousedown", () => createGrid(4));
+button8 = document.querySelector('.button-8');
+button8.addEventListener("mousedown", () => createGrid(8));
+button16 = document.querySelector('.button-16');
+button16.addEventListener("mousedown", () => createGrid(16));
+button32 = document.querySelector('.button-32');
+button32.addEventListener("mousedown", () => createGrid(32));
+button64 = document.querySelector('.button-64');
+button64.addEventListener("mousedown", () => createGrid(64));
+button128 = document.querySelector('.button-128');
+button128.addEventListener("mousedown", () => createGrid(128));
 
 /////////////////////////////////
 // LISTENER FUNCTIONS DEFINED //
@@ -74,6 +99,10 @@ function changeColor(color) {
     chosenColor = color;
 }
 
+function onInputChange() {
+    createGrid(this.valueAsNumber);
+}
+
 
 
 
@@ -84,7 +113,6 @@ function changeColor(color) {
 //////////
 
 let chosenColor = RED;
-
 let boxList = [];
-drawGrid();
-addHoverEvents(boxList);
+gridSize = 8;
+createGrid(gridSize);

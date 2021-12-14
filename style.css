@@ -54,8 +54,7 @@ body {
     height: 10%;
 }
 
-.color-chooser,
-.size-chooser {
+.color-chooser {
     height: 50px;
     width: 75px;
     background-color: crimson;
@@ -69,7 +68,7 @@ body {
     background-color: lightgray;
     border-color: rgb(238, 238, 238);
     border-style: solid;
-    border-width: .5px;
+    border-width: .1px;
     border-radius: 1px;
     box-sizing: border-box;
     margin: 0px;
@@ -86,13 +85,15 @@ body {
     height: 80px;
     justify-content: center;
     align-items: center;
+    border-color: #7B1FA2;
 }
 
 .color-chooser button {
     width: 33.333332%;
     height: 50%;
     border-radius: 0;
-    color: rgba(255, 217, 0, 0.678);
+    color: goldenrod;
+    border-color: #7B1FA2;
 }
 
 .red-button {
@@ -123,17 +124,26 @@ body {
     width: 100px;
     height: 40px;
     background-color: #A93226;
+    color: goldenrod;
+    border-color: #7B1FA2;
     
 }
 
-.size-chooser {
-    width: 200px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #A93226;
-}
- .size-chooser input {
-     width: 180px;
+
+ .title-box h1 {
+     color: goldenrod;
  }
+
+.size-chooser {
+    display: flex;
+    flex-wrap: wrap;
+    border-color: #7B1FA2;
+
+}
+
+.size-chooser button {
+    width: 25%;
+    color: goldenrod;
+    border-color: #7B1FA2;
+    background: #A93226;
+}
