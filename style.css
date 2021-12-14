@@ -2,14 +2,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    height: 100vh;
+    background-color: #7B1FA2;
+    flex-direction: column;
+    gap: 50px;
 }
 
 .etch-body {
-    background-color: blue;
+    background-color: #D32F2F;
     border-width: 3px;
     border-style: solid;
-    border-color: blue;
+    border-color: #A93226;
     border-radius: 40px;    
     width: 700px;
     height: 700px;
@@ -27,7 +30,7 @@ body {
 .etch-screen {
     width: 80%;
     height: 80%;
-    background-color: cornsilk;
+    background-color: #A93226;
     border-radius: 2px;
     display: flex;
     align-items: center;
@@ -39,12 +42,12 @@ body {
     height: 99%;
     display: flex;
     flex-wrap: wrap;
-
+    background-color: #A93226;
 }
 
 .options-area {
     display: flex;
-    gap: 70px;
+    gap: 20px;
     justify-content: left;
     align-items: center;
     width: 80%;
@@ -63,18 +66,74 @@ body {
 }
 
 .testBox {
-    background-color: white;
-    border-color: rgb(199, 197, 197);
+    background-color: lightgray;
+    border-color: rgb(238, 238, 238);
     border-style: solid;
-    border-width: 1px;
+    border-width: .5px;
     border-radius: 1px;
     box-sizing: border-box;
     margin: 0px;
     padding:0px;
     vertical-align: top;
     font-size: 0px;
+
 }
 
-.testBox:hover {
-    background-color: rebeccapurple;
+.color-chooser {
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
 }
+
+.color-chooser button {
+    width: 33.333332%;
+    height: 50%;
+    border-radius: 0;
+    color: rgba(255, 217, 0, 0.678);
+}
+
+.red-button {
+    background-color: #D32F2F;
+}
+
+.purple-button {
+    background-color: #7B1FA2;
+}
+
+.blue-button {
+    background-color: #1976D2;
+}
+
+.green-button {
+    background-color: #148F77;
+}
+
+.black-button {
+    background-color: black;
+}
+
+.gray-button {
+    background-color: lightgray;
+}
+
+.clear-button button {
+    width: 100px;
+    height: 40px;
+    background-color: #A93226;
+    
+}
+
+.size-chooser {
+    width: 200px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #A93226;
+}
+ .size-chooser input {
+     width: 180px;
+ }

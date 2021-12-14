@@ -9,14 +9,22 @@
     <title>Etch-a-Sketch</title>
 </head>
 <body>
+    <div class="title-box"><h1>Jordan's Etch-a-Sketch</h1></div>
     <div class="etch-body">
         <div class="etch-screen">
             <div class="drawing-area"></div>
         </div>
         <div class="options-area">
             <div class="clear-button"><button>Clear</button></div>
-            <div class="color-chooser">Blank for now</div>
-            <div class="size-chooser">Blank for now</div>
+            <div class="color-chooser">
+                <button class="red-button">RED</button>
+                <button class="purple-button">GREEN</button>
+                <button class="blue-button">BLUE</button>
+                <button class="green-button">GREEN</button>
+                <button class="black-button">BLACK</button>
+                <button class="gray-button">GRAY</button>
+            </div>
+            <div class="size-chooser"><input type="range" name="size" min="1" max="101" value="30" step="10"></div>
         </div>
     </div>    
 </body>
